@@ -70,8 +70,23 @@ npm run preview
 │   └── main.jsx        # Entrypoint
 ├── index.html          # HTML shell with SEO meta tags & web fonts
 ├── package.json        # Dependencies and scripts
+├── render.yaml         # Render Static Site Infrastructure as Code config
 └── vite.config.js      # Vite configuration
 ```
+
+## Render Deployment Configuration
+
+This site is configured for zero-friction deployment on [Render](https://render.com/) as a **Static Site**:
+
+- **Root Directory**: *(leave blank / empty)*
+- **Build Command**: `npm install && npm run build`
+- **Publish Directory**: `dist`
+- **SPA Client-Side Routing Rewrite**:
+  - **Source**: `/*`
+  - **Destination**: `/index.html`
+  - **Action**: `Rewrite`
+
+The included [`render.yaml`](file:///d:/work/boiler-website/render.yaml) automatically provides these settings as code.
 
 ## License
 
