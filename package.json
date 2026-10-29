@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node -e \"console.log('[Render Build Check] dist created at:', require('path').resolve('dist'), 'Contents:', require('fs').readdirSync('dist'))\"",
     "preview": "vite preview"
   },
   "dependencies": {
